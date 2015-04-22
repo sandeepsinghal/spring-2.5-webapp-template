@@ -14,6 +14,6 @@ public class HelloWorldController implements Controller
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		return new ModelAndView("index.jsp");
+		return new ModelAndView("index");
 	}
 }
