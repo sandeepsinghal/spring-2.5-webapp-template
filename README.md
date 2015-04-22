@@ -1,1 +1,1 @@
-# spring-2.5-webapp-template
+gradle init --type java-library
