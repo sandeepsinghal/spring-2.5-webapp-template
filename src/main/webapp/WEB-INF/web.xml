@@ -4,19 +4,24 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
-    <servlet>
-        <servlet-name>spring-servlet</servlet-name>
-        <servlet-class>
+  <context-param>
+    <description>locations of the Spring configuration files</description>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+		/WEB-INF/spring-sample-servlet.xml,
+	</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>spring-sample</servlet-name>
+    <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>spring-servlet</servlet-name>
-        <url-pattern>/welcome.jsp</url-pattern>
-        <url-pattern>/welcome.html</url-pattern>
-        <url-pattern>*.html</url-pattern>
-    </servlet-mapping>
-  
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spring-sample</servlet-name>
+    <url-pattern>/welcome.jsp</url-pattern>
+    <url-pattern>/welcome.html</url-pattern>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
 </web-app>
