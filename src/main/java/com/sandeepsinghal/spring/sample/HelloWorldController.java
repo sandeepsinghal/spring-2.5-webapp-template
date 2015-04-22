@@ -11,10 +11,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class HelloWorldController implements Controller
 {
-
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		return new
+		return new ModelAndView("index.jsp");
 	}
 }
